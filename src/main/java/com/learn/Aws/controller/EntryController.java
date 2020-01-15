@@ -17,6 +17,6 @@ public class EntryController {
 
 	@GetMapping
 	public String getTime() {
-		return new Date().toString();
+		return "result from second EC2 >-->"+new Date().toString();
 	}
 }
