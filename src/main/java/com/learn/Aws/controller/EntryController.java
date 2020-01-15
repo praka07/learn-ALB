@@ -3,8 +3,7 @@
  */
 package com.learn.Aws.controller;
 
-import java.util.Date;
-
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class EntryController {
 
 	@GetMapping
-	public String getTime() {
-		return new Date().toString();
+	public ResponseEntity<String> getTime() {
+		return ResponseEntity.ok().body("{ \"message\" : \"i am from zone ap-south-1a\"}");
 	}
 }
