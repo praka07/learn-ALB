@@ -3,6 +3,7 @@
  */
 package com.learn.Aws.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,8 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EntryController {
 
+	@Value("{msg}")
+	private String customMsg;
+
 	@GetMapping
 	public ResponseEntity<String> getTime() {
-		return ResponseEntity.ok().body("{ \"message\" : \"i am from zone ap-south-1a\"}");
+		return ResponseEntity.ok().body("{\"message\":\"" + customMsg + "\"}");
 	}
 }
