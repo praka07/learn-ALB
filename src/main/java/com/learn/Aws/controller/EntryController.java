@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EntryController {
 
-	@Value("{msg}")
+	@Value("${msg}")
 	private String customMsg;
 
 	@GetMapping
