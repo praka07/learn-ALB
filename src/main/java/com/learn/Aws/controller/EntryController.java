@@ -20,6 +20,6 @@ public class EntryController {
 
 	@GetMapping
 	public ResponseEntity<String> getTime() {
-		return ResponseEntity.ok().body("{\"message\":\"" + customMsg + "\"}");
+		return ResponseEntity.ok().body(customMsg);
 	}
 }
